@@ -1,5 +1,8 @@
 function loadUrls(){
 // fetch urls from textarea and load them
+// _new, _blank,
+// "top = 100, left = 200, height = 400, width = 900" NEW WINDOW specified size
+  window.open("https://www.google.com", "_blank");
 }
 
 function saveUrls(){
@@ -7,4 +10,4 @@ function saveUrls(){
 }
 
 document.getElementById('button').addEventListener('click', loadUrls);
-document.getElementById('button').addEventListener('click', saveUrls);
+//document.getElementById('button').addEventListener('click', saveUrls);
