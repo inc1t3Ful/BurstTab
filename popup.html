@@ -11,17 +11,64 @@
     </script>
 
     <h3><center> Paste links here </center></h3>
-    <textarea rows = "10"
-              cols = "80">
-    </textarea>
+
+    <!-- Tab links -->
+    <center>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'Work')">Work</button>
+      <button class="tablinks" onclick="openTab(event, 'Leisure')">Leisure</button>
+      <button class="tablinks" onclick="openTab(event, 'Etc')">Etc</button>
+    </div>
+    </center>
+
+    <!-- Tab content -->
+    <div id="Work" class="tabcontent">
+    </div>
+
+    <div id="Leisure" class="tabcontent">
+    </div>
+
+    <div id="Etc" class="tabcontent">
+    </div>
+
     <p>
-    <button type= "submit"
-            align= "center"
-            style = "width: 500px;"
-            id = "button">
-            Burst!
-    </button>
+      <textarea rows = "10"
+                cols = "80">
+      </textarea>
     </p>
+
+    <p>
+      <button type= "submit"
+              align= "center"
+              style = "width: 500px;"
+              id = "button">
+              Burst!
+      </button>
+    </p>
+
+    <script>
+      function openTab(evt, tabLabel) {
+          // Declare all variables
+          var i, tabcontent, tablinks;
+
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+              tabcontent[i].style.display = "none";
+          }
+
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+
+          // Show the current tab, and add an "active" class to the button that opened the tab
+          document.getElementById(tabLabel).style.display = "block";
+          evt.currentTarget.className += " active";
+      }
+    </script>
+
   </body>
 
 </html>
