@@ -2,8 +2,9 @@ function loadUrls(){
 // fetch urls from textarea and load them
 // _new, _blank,
 // "top = 100, left = 200, height = 400, width = 900" NEW WINDOW specified size
-  window.open("https://www.google.com", "_blank");
-}
+  var urltypes = ["http", "https", "file", "view-source"];
+  var urls = document.getElementById('urls').value.split('\n');
+  
 
 function saveUrls(){
   // fetch urls and save in chrome storage
